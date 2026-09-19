@@ -1,0 +1,234 @@
+.catalog-page {
+  min-height: 100vh;
+  padding: 40px 6% 72px;
+}
+
+.catalog-container {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.catalog-back-button,
+.catalog-details-button,
+.catalog-apply-link {
+  border: 1px solid var(--primary-border);
+  border-radius: var(--radius-sm);
+  background: #ffffff;
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 700;
+  padding: 10px 14px;
+  text-decoration: none;
+}
+
+.catalog-back-button:hover,
+.catalog-details-button:hover {
+  background: var(--primary-light);
+}
+
+.catalog-heading {
+  margin: 32px 0;
+  max-width: 680px;
+}
+
+.catalog-heading h1 {
+  margin: 10px 0;
+  color: var(--text-main);
+  font-size: clamp(28px, 4vw, 40px);
+  line-height: 1.15;
+}
+
+.catalog-heading p,
+.catalog-description,
+.catalog-provider,
+.catalog-benefits {
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.catalog-category-grid,
+.catalog-opportunity-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.catalog-category-card,
+.catalog-opportunity-card,
+.catalog-empty-state {
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-lg);
+  background: #ffffff;
+  box-shadow: var(--shadow-sm);
+}
+
+.catalog-category-card {
+  padding: 24px;
+  text-align: left;
+  transition: all 0.25s ease;
+}
+
+.catalog-category-card:hover,
+.catalog-category-card:focus-visible {
+  transform: translateY(-3px);
+  border-color: var(--primary-border);
+  box-shadow: var(--shadow-hover);
+  outline: none;
+}
+
+.catalog-category-icon {
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: var(--primary-light);
+  font-size: 24px;
+}
+
+.catalog-category-name,
+.catalog-category-description,
+.catalog-category-count {
+  display: block;
+}
+
+.catalog-category-name {
+  margin: 16px 0 8px;
+  color: var(--text-main);
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.catalog-category-description {
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.catalog-category-count {
+  margin-top: 12px;
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.catalog-title-row,
+.catalog-card-top,
+.catalog-card-actions {
+  display: flex;
+  align-items: center;
+}
+
+.catalog-title-row {
+  gap: 14px;
+}
+
+.catalog-results-heading .catalog-category-icon {
+  flex: 0 0 auto;
+}
+
+.catalog-opportunity-card {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.catalog-card-top {
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.catalog-type-pill {
+  border-radius: var(--radius-full);
+  background: var(--primary-light);
+  color: var(--primary);
+  font-size: 11px;
+  font-weight: 800;
+  padding: 5px 9px;
+}
+
+.catalog-deadline {
+  color: var(--text-light);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.catalog-opportunity-card h2 {
+  color: var(--text-main);
+  font-size: 18px;
+  line-height: 1.35;
+}
+
+.catalog-provider {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.catalog-description,
+.catalog-benefits {
+  font-size: 13px;
+}
+
+.catalog-card-actions {
+  gap: 10px;
+  margin-top: auto;
+}
+
+.catalog-apply-link {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+.catalog-apply-link:hover {
+  background: var(--primary-hover);
+}
+
+.catalog-empty-state {
+  grid-column: 1 / -1;
+  padding: 48px 24px;
+  text-align: center;
+}
+
+.catalog-empty-state > div {
+  font-size: 38px;
+  margin-bottom: 12px;
+}
+
+.catalog-empty-state h2 {
+  color: var(--text-main);
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.catalog-empty-state p {
+  color: var(--text-muted);
+}
+
+@media (max-width: 900px) {
+  .catalog-category-grid,
+  .catalog-opportunity-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .catalog-page {
+    padding: 28px 4% 48px;
+  }
+
+  .catalog-category-grid,
+  .catalog-opportunity-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .catalog-heading {
+    margin: 24px 0;
+  }
+
+  .catalog-title-row {
+    align-items: flex-start;
+  }
+}
